@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS // Projects</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body { background-color: #030712; color: #f3f4f6; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .glass-nav { background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
         .project-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .project-card:hover { transform: translateY(-8px); border-color: rgba(59, 130, 246, 0.4); box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.15); }
-        
-        /* Filter Button Active State */
         .filter-btn.active { background-color: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.5); color: #60a5fa; }
-        
-        /* Card hiding logic for the filter */
-        .project-card.hidden { display: none; }
     </style>
 </head>
 <body class="antialiased pb-20 selection:bg-blue-500 selection:text-white flex flex-col min-h-screen">
 
-    <!-- Navigation -->
+    <!-- Updated Navigation -->
     <nav class="glass-nav fixed w-full top-0 z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black tracking-tighter text-white flex items-center gap-2">
@@ -34,20 +26,19 @@
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
                 <a href="index.html" class="hover:text-white transition">Home</a>
                 <a href="projects.html" class="text-white">Projects</a>
+                <a href="about.html" class="hover:text-white transition">Operator</a>
                 <a href="contact.html" class="hover:text-white transition">Contact</a>
             </div>
             <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-bold transition shadow-lg shadow-blue-500/20">Initialize</a>
         </div>
     </nav>
 
-    <!-- Projects Header & Filters -->
     <main class="max-w-6xl mx-auto px-6 pt-32 flex-grow">
         <div data-aos="fade-right">
             <h1 class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight">Active Deployments.</h1>
             <p class="text-xl text-gray-400 mb-10 font-light max-w-2xl">Browse our classified roster of live environments, scalable architectures, and digital assets.</p>
         </div>
 
-        <!-- Interactive Filter Bar -->
         <div class="flex flex-wrap gap-3 mb-12 border-b border-gray-800 pb-8" data-aos="fade-up" data-aos-delay="100">
             <button class="filter-btn active px-5 py-2 rounded-full border border-white/10 text-sm font-medium text-gray-300 hover:bg-white/5 transition" data-filter="all">All Assets</button>
             <button class="filter-btn px-5 py-2 rounded-full border border-white/10 text-sm font-medium text-gray-300 hover:bg-white/5 transition" data-filter="frontend">UI/UX & Frontend</button>
@@ -55,13 +46,9 @@
             <button class="filter-btn px-5 py-2 rounded-full border border-white/10 text-sm font-medium text-gray-300 hover:bg-white/5 transition" data-filter="security">Security Protocols</button>
         </div>
 
-        <!-- Dynamic Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-            
-            <!-- Project 1 (Frontend) -->
             <div class="project-card rounded-3xl p-6 cursor-pointer" data-category="frontend" data-aos="fade-up" data-aos-delay="100">
                 <div class="bg-black/50 rounded-2xl h-56 mb-6 flex items-center justify-center border border-gray-800 relative overflow-hidden group">
-                    <!-- Subtle background glow -->
                     <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <i class="fas fa-chart-network text-6xl text-blue-500 opacity-80 group-hover:scale-110 transition-transform duration-500"></i>
                     <div class="absolute top-4 right-4 bg-green-500/10 border border-green-500/20 text-green-400 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">LIVE</div>
@@ -73,8 +60,6 @@
                     <span class="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-gray-400">WebGL</span>
                 </div>
             </div>
-
-            <!-- Project 2 (Security) -->
             <div class="project-card rounded-3xl p-6 cursor-pointer" data-category="security" data-aos="fade-up" data-aos-delay="200">
                 <div class="bg-black/50 rounded-2xl h-56 mb-6 flex items-center justify-center border border-gray-800 relative overflow-hidden group">
                     <div class="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -88,8 +73,6 @@
                     <span class="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-gray-400">Next.js</span>
                 </div>
             </div>
-
-            <!-- Project 3 (Backend) -->
             <div class="project-card rounded-3xl p-6 cursor-pointer" data-category="backend" data-aos="fade-up" data-aos-delay="300">
                 <div class="bg-black/50 rounded-2xl h-56 mb-6 flex items-center justify-center border border-gray-800 relative overflow-hidden group">
                     <div class="absolute inset-0 bg-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -103,8 +86,6 @@
                     <span class="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-gray-400">PostgreSQL</span>
                 </div>
             </div>
-            
-            <!-- Project 4 (Frontend) -->
             <div class="project-card rounded-3xl p-6 cursor-pointer" data-category="frontend" data-aos="fade-up" data-aos-delay="400">
                 <div class="bg-black/50 rounded-2xl h-56 mb-6 flex items-center justify-center border border-gray-800 relative overflow-hidden group">
                     <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -118,7 +99,6 @@
                     <span class="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-gray-400">Tailwind</span>
                 </div>
             </div>
-
         </div>
     </main>
 
@@ -130,33 +110,21 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize Scroll Animations
         AOS.init({ once: true, offset: 50 });
-
-        // Filtering Logic
         document.addEventListener('DOMContentLoaded', () => {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
-
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
                     filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
                     btn.classList.add('active');
-
                     const filterValue = btn.getAttribute('data-filter');
-
-                    // Filter cards
                     projectCards.forEach(card => {
                         const category = card.getAttribute('data-category');
-                        
                         if (filterValue === 'all' || filterValue === category) {
                             card.style.display = 'block';
-                            // Re-trigger a small animation when they reappear
                             card.style.animation = 'fadeIn 0.5s ease forwards';
                         } else {
                             card.style.display = 'none';

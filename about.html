@@ -13,14 +13,13 @@
         .terminal-box { background: #000; border: 1px solid rgba(59, 130, 246, 0.3); box-shadow: inset 0 0 20px rgba(59, 130, 246, 0.1); }
         .skill-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s; }
         .skill-card:hover { border-color: rgba(59, 130, 246, 0.5); transform: translateY(-3px); background: rgba(59, 130, 246, 0.05); }
-        /* Typing animation cursor */
         .cursor-blink { animation: blink 1s step-end infinite; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     </style>
 </head>
 <body class="antialiased pb-20 selection:bg-blue-500 selection:text-white flex flex-col min-h-screen">
 
-    <!-- Navigation -->
+    <!-- Updated Navigation -->
     <nav class="glass-nav fixed w-full top-0 z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black tracking-tighter text-white flex items-center gap-2">
@@ -36,10 +35,8 @@
         </div>
     </nav>
 
-    <!-- Profile Hero & Terminal -->
     <main class="max-w-6xl mx-auto px-6 pt-32 flex-grow">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-            <!-- Bio Info -->
             <div data-aos="fade-right">
                 <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider text-blue-400 uppercase mb-6">
                     <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
@@ -54,8 +51,6 @@
                     <a href="#" class="border border-white/10 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-white/5 transition flex items-center gap-2"><i class="fas fa-download"></i> Download Dossier</a>
                 </div>
             </div>
-
-            <!-- Terminal Window -->
             <div class="terminal-box rounded-xl p-6 font-mono text-xs md:text-sm text-blue-400 relative overflow-hidden" data-aos="fade-left">
                 <div class="absolute top-0 left-0 w-full h-8 bg-white/5 border-b border-white/10 flex items-center px-4 gap-2">
                     <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
@@ -70,72 +65,44 @@
                     <p class="mb-2">> LOADING OPERATOR DATA...</p>
                     <p class="mb-2 text-yellow-400">WARNING: CLEARANCE LEVEL ALPHA REQUIRED</p>
                     <p class="mb-4">> ACCESS GRANTED.</p>
-                    <p id="typewriter" class="text-white"></p><span class="cursor-blink">_</span>
+                    <p id="typewriter" class="text-white inline"></p><span class="cursor-blink">_</span>
                 </div>
             </div>
         </div>
 
-        <!-- Tech Stack -->
         <div class="mb-24">
             <h2 class="text-2xl font-bold text-white mb-8 border-b border-gray-800 pb-4" data-aos="fade-up">Combat Loadout (Tech Stack)</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <!-- Stack Items -->
-                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="50">
-                    <i class="fab fa-react text-3xl text-blue-400"></i>
-                    <span class="text-xs font-mono text-gray-400">React.js</span>
-                </div>
-                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fab fa-node-js text-3xl text-green-500"></i>
-                    <span class="text-xs font-mono text-gray-400">Node.js</span>
-                </div>
-                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="150">
-                    <i class="fab fa-python text-3xl text-yellow-400"></i>
-                    <span class="text-xs font-mono text-gray-400">Python</span>
-                </div>
-                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fab fa-aws text-3xl text-orange-400"></i>
-                    <span class="text-xs font-mono text-gray-400">AWS Cloud</span>
-                </div>
-                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="250">
-                    <i class="fas fa-database text-3xl text-blue-300"></i>
-                    <span class="text-xs font-mono text-gray-400">PostgreSQL</span>
-                </div>
-                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fab fa-figma text-3xl text-purple-400"></i>
-                    <span class="text-xs font-mono text-gray-400">Figma</span>
-                </div>
+                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="50"><i class="fab fa-react text-3xl text-blue-400"></i><span class="text-xs font-mono text-gray-400">React.js</span></div>
+                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="100"><i class="fab fa-node-js text-3xl text-green-500"></i><span class="text-xs font-mono text-gray-400">Node.js</span></div>
+                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="150"><i class="fab fa-python text-3xl text-yellow-400"></i><span class="text-xs font-mono text-gray-400">Python</span></div>
+                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="200"><i class="fab fa-aws text-3xl text-orange-400"></i><span class="text-xs font-mono text-gray-400">AWS Cloud</span></div>
+                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="250"><i class="fas fa-database text-3xl text-blue-300"></i><span class="text-xs font-mono text-gray-400">PostgreSQL</span></div>
+                <div class="skill-card rounded-xl p-4 flex flex-col items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="300"><i class="fab fa-figma text-3xl text-purple-400"></i><span class="text-xs font-mono text-gray-400">Figma</span></div>
             </div>
         </div>
 
-        <!-- Service Record (Timeline) -->
         <div>
             <h2 class="text-2xl font-bold text-white mb-12 border-b border-gray-800 pb-4" data-aos="fade-up">Service Record</h2>
             <div class="space-y-8 border-l border-white/10 ml-4 pl-8 relative">
-                
-                <!-- Timeline Item 1 -->
                 <div class="relative" data-aos="fade-up">
                     <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[38px] top-1.5 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
                     <span class="text-xs font-mono text-blue-400 mb-1 block">2024 - PRESENT</span>
                     <h3 class="text-xl font-bold text-white">Lead Systems Engineer // NEXUS Dynamics</h3>
                     <p class="text-sm text-gray-400 mt-2 max-w-2xl">Architecting global infrastructure and directing a team of developers to build high-converting, scalable web applications.</p>
                 </div>
-
-                <!-- Timeline Item 2 -->
                 <div class="relative" data-aos="fade-up">
                     <div class="absolute w-3 h-3 bg-gray-600 rounded-full -left-[38px] top-1.5"></div>
                     <span class="text-xs font-mono text-gray-500 mb-1 block">2021 - 2024</span>
                     <h3 class="text-xl font-bold text-gray-300">Frontend Developer // Horizon Tech</h3>
                     <p class="text-sm text-gray-400 mt-2 max-w-2xl">Built interactive dashboards, managed state complex user interfaces, and optimized legacy codebases for speed.</p>
                 </div>
-
-                <!-- Timeline Item 3 -->
                 <div class="relative" data-aos="fade-up">
                     <div class="absolute w-3 h-3 bg-gray-600 rounded-full -left-[38px] top-1.5"></div>
                     <span class="text-xs font-mono text-gray-500 mb-1 block">2019 - 2021</span>
                     <h3 class="text-xl font-bold text-gray-300">Junior Analyst // CyberSec Corp</h3>
                     <p class="text-sm text-gray-400 mt-2 max-w-2xl">Monitored network traffic, assisted in penetration testing, and compiled security vulnerability reports.</p>
                 </div>
-
             </div>
         </div>
     </main>
@@ -148,25 +115,18 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, offset: 50 });
-
-        // Terminal Typewriter Effect
         const text = "> STATS: 48 Repositories | 12 Deployments | Coffee.level: CRITICAL";
         let i = 0;
-        const speed = 50; 
-        
         function typeWriter() {
             if (i < text.length) {
                 document.getElementById("typewriter").innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, speed);
+                setTimeout(typeWriter, 50);
             }
         }
-        
-        // Start typing after a short delay to simulate booting
         setTimeout(typeWriter, 1500);
     </script>
 </body>

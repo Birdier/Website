@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS // Home</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- AOS Animation Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body { background-color: #030712; color: #f3f4f6; font-family: 'Inter', sans-serif; overflow-x: hidden; }
@@ -20,7 +17,7 @@
 </head>
 <body class="antialiased selection:bg-blue-500 selection:text-white">
 
-    <!-- Navigation -->
+    <!-- Updated Navigation -->
     <nav class="glass-nav fixed w-full top-0 z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black tracking-tighter text-white flex items-center gap-2">
@@ -29,17 +26,15 @@
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
                 <a href="index.html" class="text-white">Home</a>
                 <a href="projects.html" class="hover:text-white transition">Projects</a>
+                <a href="about.html" class="hover:text-white transition">Operator</a>
                 <a href="contact.html" class="hover:text-white transition">Contact</a>
             </div>
             <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-bold transition shadow-lg shadow-blue-500/20">Initialize</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="min-h-screen flex items-center justify-center relative px-6">
-        <!-- Ambient Background Glow -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none"></div>
-        
         <div class="max-w-4xl mx-auto text-center relative z-10 mt-20" data-aos="fade-up" data-aos-duration="1000">
             <span class="border border-blue-500/30 bg-blue-500/10 text-blue-400 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Next-Gen Architecture</span>
             <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none text-white text-glow">
@@ -53,46 +48,31 @@
                 <a href="contact.html" class="border border-white/10 hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold transition">Commence Sync</a>
             </div>
         </div>
-        
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-500">
             <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
-    <!-- Core Capabilities Section -->
     <section class="py-32 px-6 relative z-10 max-w-6xl mx-auto">
         <div class="text-center mb-20" data-aos="fade-up">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Core Capabilities</h2>
             <p class="text-gray-400">The technical pillars that power our deployments.</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Service 1 -->
             <div class="service-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 border border-blue-500/20">
-                    <i class="fas fa-code text-2xl text-blue-400"></i>
-                </div>
+                <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 border border-blue-500/20"><i class="fas fa-code text-2xl text-blue-400"></i></div>
                 <h3 class="text-xl font-bold text-white mb-3">Frontend Architecture</h3>
                 <p class="text-gray-400 text-sm leading-relaxed mb-6">Building lightning-fast, reactive user interfaces using modern frameworks like React, Vue, and vanilla WebGL.</p>
                 <a href="projects.html" class="text-blue-400 text-sm font-bold hover:text-blue-300 transition flex items-center gap-2">Explore <i class="fas fa-arrow-right"></i></a>
             </div>
-
-            <!-- Service 2 -->
             <div class="service-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20">
-                    <i class="fas fa-server text-2xl text-purple-400"></i>
-                </div>
+                <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20"><i class="fas fa-server text-2xl text-purple-400"></i></div>
                 <h3 class="text-xl font-bold text-white mb-3">Backend Infrastructure</h3>
                 <p class="text-gray-400 text-sm leading-relaxed mb-6">Designing scalable, zero-downtime server architectures, RESTful APIs, and secure database schemas.</p>
                 <a href="projects.html" class="text-purple-400 text-sm font-bold hover:text-purple-300 transition flex items-center gap-2">Explore <i class="fas fa-arrow-right"></i></a>
             </div>
-
-            <!-- Service 3 -->
             <div class="service-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 border border-green-500/20">
-                    <i class="fas fa-shield-halved text-2xl text-green-400"></i>
-                </div>
+                <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 border border-green-500/20"><i class="fas fa-shield-halved text-2xl text-green-400"></i></div>
                 <h3 class="text-xl font-bold text-white mb-3">Security Audits</h3>
                 <p class="text-gray-400 text-sm leading-relaxed mb-6">Comprehensive penetration testing, vulnerability patching, and implementation of zero-trust networks.</p>
                 <a href="projects.html" class="text-green-400 text-sm font-bold hover:text-green-300 transition flex items-center gap-2">Explore <i class="fas fa-arrow-right"></i></a>
@@ -114,16 +94,15 @@
                     <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            
             <div>
                 <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Navigation</h4>
                 <ul class="space-y-2 text-gray-400 text-sm">
                     <li><a href="index.html" class="hover:text-white transition">Home</a></li>
                     <li><a href="projects.html" class="hover:text-white transition">Active Deployments</a></li>
+                    <li><a href="about.html" class="hover:text-white transition">Operator Profile</a></li>
                     <li><a href="contact.html" class="hover:text-white transition">Establish Sync</a></li>
                 </ul>
             </div>
-
             <div>
                 <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Status</h4>
                 <ul class="space-y-2 text-gray-400 text-sm font-mono">
@@ -132,21 +111,13 @@
                 </ul>
             </div>
         </div>
-        
         <div class="max-w-6xl mx-auto border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-mono">
             <p>&copy; 2026 NEXUS DYNAMICS. ALL RIGHTS RESERVED.</p>
             <p>DESIGNED BY <span class="text-blue-500">OPERATOR PRO</span></p>
         </div>
     </footer>
 
-    <!-- AOS Animation Library Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize Scroll Animations
-        AOS.init({
-            once: true, // whether animation should happen only once - while scrolling down
-            offset: 50, // offset (in px) from the original trigger point
-        });
-    </script>
+    <script>AOS.init({ once: true, offset: 50 });</script>
 </body>
 </html>
